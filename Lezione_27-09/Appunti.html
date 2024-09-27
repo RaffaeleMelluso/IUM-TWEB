@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appunti</title>
+    <style>
+        div.static{
+            position: relative; /*relativo al suo contenitore*/
+            position: fixed; /*relativo alla finestra*/
+            position: absolute; /*relativo al primo contenitore con posizione diversa da static*/
+            position: sticky; /*relativo al suo contenitore fino a quando non viene scrollato*/
+            float: left; /*sposta l'elemento a sinistra*/
+            float: right; /*sposta l'elemento a destra*/
+            clear: both; /*non permette ad altri elementi di posizionarsi a destra o sinistra*/
+            z-index: 1; /*posiziona l'elemento sopra gli altri*/
+            z-index: -1; /*posiziona l'elemento sotto gli altri*/
+            z-index: inherit; /*eredita il valore di z-index dal suo contenitore*/
+            z-index: auto; /*valore di default*/
+
+        }
+        #rcorner1{
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px; 
+            width: 200px;
+            height: 150px; 
+        } /*bordi arrotondati*/
+        /*si può fare masking delle immagini*/
+        .flex-container{
+            display: flex;
+            flex-wrap: nowrap; /*nmette i div in riga e non li fa andare a capo*/
+            flex-wrap: wrap; /*mette i div in riga e li fa andare a capo se non ci stanno*/
+            flex-wrap: wrap-reverse; /*mette i div in riga e li fa andare a capo se non ci stanno in ordine inverso*/
+            flex-direction: row; /*mette tutti i div in una riga*/
+            flex-direction: column; /*mette tutti i div in una colonna*/
+            flex-direction: row-reverse; /*mette tutti i div in una riga in ordine inverso*/
+            flex-direction: column-reverse; /*mette tutti i div in una colonna in ordine inverso*/
+            justify-content: space-around; /*distribuisce gli elementi con spaziatura uniforme*/
+            justify-content: flex-start; /*distribuisce gli elementi all'inizio*/
+            justify-content: flex-end; /*distribuisce gli elementi alla fine*/
+            justify-content: center; /*distribuisce gli elementi al centro*/
+            justify-content: space-between; /*distribuisce gli elementi con spaziatura uniforme tra di loro*/
+            justify-content: space-evenly; /*distribuisce gli elementi con spaziatura uniforme tra di loro e ai lati*/
+        }
+        .flex-container > div{  /*seleziona i div all'interno di flex-container*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Appunti</h1>
+    </header>
+    <main>
+        <p>Benvenuto nei miei appunti!</p>
+        <div class="static" id="rcorner1">
+            <p>Questo è un riquadro con i bordi arrotondati</p>
+        </div>
+        <div class="flex-container">
+            <div style="background-color: lightblue; height: 100px; width: 100px;">1</div>
+            <div style="background-color: lightcoral; height: 100px; width: 100px;">2</div>
+            <div style="background-color: lightgreen; height: 100px; width: 100px;">3</div>
+        </div>
+    </main>
+    <script>
+        
+    </script>
+</body>
+</html>

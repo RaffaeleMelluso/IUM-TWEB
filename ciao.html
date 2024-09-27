@@ -60,14 +60,15 @@
         }
         .image-container {
             text-align: center;
-            margin: 20px 0;
+            width: 45%;
+            margin-right: 5%;
         }
         .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #333;
+            display: flex;
             transition: transform 0.3s ease, opacity 0.3s ease;
+            object-fit: cover; /*per mantenere le proporzioni dell'immagine*/
+            
         }
         .image-container img:hover {
             transform: scale(1.05);
@@ -90,7 +91,7 @@
     </nav>
     <div class="content">
         <div class="image-container">
-            <img src="https://example.com/the-rock.jpg" alt="The Rock">
+            <img src="https://media.gqitalia.it/photos/642e9d8bfc2b9ece8567af56/3:2/w_1619,h_1079,c_limit/therock.jpg" alt="The Rock">
         </div>
         <h2>Welcome to Pelati Sales</h2>
         <p>Discover the best deals on pelati (people) with our exclusive offers. Our products are top quality and come with a satisfaction guarantee.</p>
