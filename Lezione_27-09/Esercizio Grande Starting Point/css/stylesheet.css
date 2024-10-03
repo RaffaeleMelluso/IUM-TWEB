@@ -1,4 +1,14 @@
 /* Styles for centering images */
-td {
-    text-align: center;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container > div {
+    display: flex;
+    flex-direction: column; /* Aggiunto */
+    justify-content: center;
+    align-items: center;
+    max-width: 45%;
+    margin: 1%;
 }
