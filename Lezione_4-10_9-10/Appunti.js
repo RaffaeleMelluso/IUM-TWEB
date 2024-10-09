@@ -101,3 +101,52 @@ let [x,y,z]= person; //vengono presi i parametri in ordine
 
 /**Operatore freccia => (fat arrow), serve per dichiarare funzioni anonime */
 let funzione = (a,b)=>a*b;
+
+
+
+/*LEZIONE 9/10 JAVASCRIPT 2*/
+
+/**ripetizione*/
+
+for(key in object){ //lavora sugli indici
+    console.log(key);
+}
+for(value of object){ //lavora sui valori
+    console.log(value);
+}
+
+/**DOM elements */
+
+getElementById("demo").innerHTML = "Hello Dolly!";
+/**prende l'oggetto con id demo e ne modifica il testo */
+
+getElementByClassName("demo").innerHTML = "Hello Dolly!";
+/**prende tutti gli oggetti con classe demo e ne modifica il testo */
+
+document.getElementById("demo").addEventListener("click", myFunction);
+/**toglie gli elementi da html nelle definizioni dei tag e li mette tutti nel documento javascript */
+
+window.addEventListener("resize", function(){
+    document.getElementById("demo").innerHTML = "ciao";
+    myfunction(p1,p2);
+}
+/** evento relativo alla modifica della finestra */
+
+/**quando ho due oggetti con lo stesso evento sovrapposti, si attiva per entrambi l'evento se ad esempio pigiamo il pulsante */
+
+/**browser object model, permette ad esempio di cambiare pagina o modificare gli url
+ * si usa per situazioni dinamiche, come far funzionare il link solo in una certa situazione
+ * (es form non completo)
+*/
+
+window.history.back(); //torna alla pagina precedente
+
+/**TIMING EVENTS */
+
+setTimeout(function(){alert("Hello")},3000); //dopo 3 secondi appare l'alert
+
+/**non usare jQuery */
+
+
+
+
