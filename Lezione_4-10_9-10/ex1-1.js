@@ -15,6 +15,13 @@ function myFunctionAll(){
         array[key]=object;
     }
     myFunction3(array);
+    document.getElementById("results_1_1").addEventListener("mouseover", function(){
+        this.style.backgroundColor="red";
+    });
+    document.getElementById("results_1_1").addEventListener("mouseout", function(){
+        this.style.backgroundColor="white";
+    });
+
 }
 
 function myFunction1(array){
@@ -36,6 +43,6 @@ function myFunction3(array)
         document.getElementById("results_1_3").innerText+=value.name + "\xa0" + value.surname + "\xa0" + value.age + "\n";
     }
 }
-function click(){
-    document.getElementById("button").innerText="Thank you!";
+function handleClick(){
+    document.getElementById("clickbutton").innerText="Thank you!";
 }
