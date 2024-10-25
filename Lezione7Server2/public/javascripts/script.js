@@ -1,4 +1,4 @@
-
+const axios = require('axios');
 function init(){
     document.getElementById('numberForm')
         .addEventListener('submit', function(event) {
@@ -17,5 +17,16 @@ function init(){
                     console.error('There was an error!', error);
                 });
         });
+    // Route to receive the numbers from Server 1
+    app.post('/receive-numbers', (req, res) => {
+        const { num1, num2 } = req.body;
+
+        // Processing the numbers (here we just respond back)
+        res.json({
+            receivedNum1: num1,
+            receivedNum2: num2,
+            sum: num1 + num2 // Example operation
+        });
+    });
 
 }

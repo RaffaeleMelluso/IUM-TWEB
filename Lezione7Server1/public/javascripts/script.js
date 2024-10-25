@@ -1,4 +1,4 @@
-
+const axios = require('axios');
 function init(){
     document.getElementById('numberForm')
         .addEventListener('submit', function(event) {
@@ -17,5 +17,18 @@ function init(){
                     console.error('There was an error!', error);
                 });
         });
+    // Route to receive two numbers
+    app.post('/send-numbers', async (req, res) => {
+        const { num1, num2 } = req.body;
+        try {
+            // Sending numbers to another server using Axios
+            const response = await axios.post(
+                'http://localhost:3001/receive-numbers', { num1, num2 });
+            // Respond back with the response from the second server
+            res.json(response.data);
+        } catch (error) {
+            res.status(500).send('Error sending numbers: ' + error.message);
+        }
+    });
 
 }
