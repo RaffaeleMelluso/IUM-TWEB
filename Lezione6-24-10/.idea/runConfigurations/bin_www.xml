@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
+  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" path-to-node="wsl://Ubuntu@/usr/bin/node" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$/../Lezione5_18-10">
     <envs>
-      <env name="DEBUG" value="lezione6-24-10:*" />
+      <env name="DEBUG" value="lezione5-17-10:*" />
     </envs>
     <EXTENSION ID="com.intellij.lang.javascript.buildTools.npm.rc.StartBrowserRunConfigurationExtension">
       <browser url="http://localhost:3000/" />
