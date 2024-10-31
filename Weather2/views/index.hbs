@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <h1>Weather Aggregator</h1>
+    <form id="weatherForm">
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Enter city name" required>
+        </div>
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="date" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="sendWeatherRequest()">Get Weather</button>
+    </form>
+
+    <div id="weatherResults" class="mt-4" style="display: none;">
+        <h2>Weather for <span id="resultCity"></span> on <span id="resultDate"></span></h2>
+        <p>This is the current and forecast weather for the city</p>
+        <h3>Current Weather: </h3>
+        <p><span id="currentWeather"></span></p>
+        <h3>Forecast: </h3><p>
+        <span id="forecast"></span></p>
+    </div>
+</div>
