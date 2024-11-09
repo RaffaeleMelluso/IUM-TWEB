@@ -26,12 +26,15 @@ function sendWeatherRequest() {
     axios.post('/getWeather', { city, date: dateString })
         .then(response => {
             const { city, date, currentWeather, forecast } = response.data;
-
+            console.log(forecast);
             // Update the results div with the received data
             document.getElementById('resultCity').textContent = city;
             document.getElementById('resultDate').textContent = date;
             document.getElementById('currentWeather').textContent = currentWeather;
-            document.getElementById('forecast').textContent = forecast;
+            const forecastArray = forecast
+                .map(item => `${item.day}: ${item.forecast}`)
+                .join('<br>');
+            document.getElementById('forecast').innerHTML = forecastArray;
 
             // Show the weather results div
             document.getElementById('weatherResults').style.display = 'block';
